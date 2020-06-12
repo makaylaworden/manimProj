@@ -11,3 +11,11 @@ transforms a circle into a square, and tri_circ_sqaure shows a trianlge turn int
 the following cmd commands.
 For circle_to_square: python manim.py my_ex1.py circle_to_square -pl
 For tri_circ_square: python manim.py my_ex1.py tri_circ_square  -pl
+
+
+As of 6/12/2020:
+my_ex2.py is the second go at making manim scenes. To run, put my_ex2.py in the same folder as manim.
+
+There are 2 methods in my_ex2.py, both are working with different text transitions and making the animations look smoother. To run these on the Command Prompt, do as follows:
+For text: python manim.py my_ex2.py text
+For text_and_shapes: python manim.py my_ex2.py text_and_shapes
