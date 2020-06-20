@@ -19,3 +19,10 @@ my_ex2.py is the second go at making manim scenes. To run, put my_ex2.py in the 
 There are 2 methods in my_ex2.py, both are working with different text transitions and making the animations look smoother. To run these on the Command Prompt, do as follows:
 For text: python manim.py my_ex2.py text
 For text_and_shapes: python manim.py my_ex2.py text_and_shapes
+
+As of 6/20/2020:
+Drive Link: https://drive.google.com/file/d/1u6PR_fCk3LBi9I-zzzOSF5a_Mzjy8lzC/view?usp=sharing
+This is the link to interpreter.mp4, which is what interpreter.py is mimicing. Early progress on this shows the first few
+slides of the mp4. There are some visuals of the "instruction box" and "stack" (the purple and orange boxes in the mp4).
+
+To run in cmd: python manim.py interpreter.py interp
