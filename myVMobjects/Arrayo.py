@@ -9,8 +9,6 @@
 
 
 # TODO: Have it also take in a pixel size and screen location
-# TODO: Allowing labeling on boxes, probably use an actual
-#   array to keep track of stuff but idrk rn
 
 from manimlib.imports import *
 
@@ -21,12 +19,23 @@ class Array(VGroup):
     def ___init__(self):
         VMobject.__init__(self)
 
-    def build(self, size, color):
+    # build will assemble an Array to be drawn using
+    # rectangles displayed horixontally in a VGroup.
+    # size = how many elements in the Array
+    # color = the color of the boxes
+    # text = a list of size elemets that are what each element
+    # in the Array should be labeled, these should be TextMobjects.
+    def build(self, size, color, text):
         bloop = VGroup() # return me
-        for i in range (size): # add size number of squares
-            boxo = Rectangle()
-            boxo.set_fill(color, opacity=1)
-            bloop.add(boxo)
+        for i in range (size): # makes size number of squares
+            boxo = Rectangle(fill_color=color, fill_opacity=1)
+            
+            label = text[i]
+            label.bg = BackgroundRectangle(label, fill_color=color, fill_opacity=1)
+            
+            mini_bloop = VGroup(boxo, label.bg, label) # this will allow for text
+                                                    # to be written on each box
+            bloop.add(mini_bloop)
 
-        bloop.arrange(RIGHT) # show horizontally
+        bloop.arrange(RIGHT) # show horizontally bc Array
         return bloop
