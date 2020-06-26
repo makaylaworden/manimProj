@@ -7,8 +7,6 @@
 # on their screen.
 
 # TODO: Get a pixel size setter
-# TODO: Be able to write directly on the stack, probs
-#       use something like a list to keep track of stuff.
 
 from manimlib.imports import *
 
@@ -17,12 +15,20 @@ from manimlib.imports import *
 class Stack(VGroup):
     def __init__(self):
         VMobject.__init__(self)
-    def build(self, size, color):
+    def build(self, size, color, text):
         stacko = VGroup() # to be returned
         for i in range (size): # Add size number of squares
-            lil_stacko = Square()
-            lil_stacko.set_fill(color, opacity=1)
+            boxo = Rectangle(fill_color=color, fill_opacity=1)
+
+            label = text[i]
+            label.bg = BackgroundRectangle(label, width=(boxo.width/2),
+                                           fill_color=color, fill_opacity=1)
+
+            lil_stacko = VGroup(boxo, label.bg, label)
+            
             stacko.add(lil_stacko)
             
         stacko.arrange(DOWN) # assemble vertically
         return stacko
+
+
