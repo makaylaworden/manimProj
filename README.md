@@ -29,3 +29,8 @@ To run in cmd: python manim.py interpreter.py interp
 
 As of 6/26/2020:
 Arrayo and Stacko objects have been created. These are used to display either horizontal or vertical boxes in a VGroup. Both classes have parameters of color, size, and text so the user can customize the way they look. More progress in finishing interpreter has been made, although it needs some work.
+
+Christian:
+I had to set
+   setenv PYTHONPATH .
+for python to pick up submodules.
