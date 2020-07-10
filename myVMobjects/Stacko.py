@@ -15,7 +15,7 @@ from manimlib.imports import *
 class Stack(VGroup):
     def __init__(self):
         VMobject.__init__(self)
-    def build(self, size, color, text):
+    def build(self, size, color, text): # Takes a TextMobject text
         stacko = VGroup() # to be returned
         for i in range (size): # Add size number of squares
             boxo = Rectangle(fill_color=color, fill_opacity=1)
@@ -30,5 +30,3 @@ class Stack(VGroup):
             
         stacko.arrange(DOWN) # assemble vertically
         return stacko
-
-
