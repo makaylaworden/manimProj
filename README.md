@@ -34,3 +34,6 @@ Christian:
 I had to set
    setenv PYTHONPATH .
 for python to pick up submodules.
+
+As of 7/10/2020:
+interpreter.py is done but could use some cleaning up. Reccommended to run in cmd with lower quality: python manim.py interpreter.py interp -pl. This has 36 animations in it so it takes a while on manim's end to assemble it.
